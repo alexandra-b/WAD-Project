@@ -5,6 +5,13 @@ body{
   background-color: #fefcf6;
 }
 /* Global  (. is for class)*/
+.secondContainer{
+  display: flex;
+  justify-content: center;
+  background-color: #f45f42;
+  border-top: #f18900 3px solid;
+}
+
 .container{
   width:80%;
   margin:auto;
@@ -28,7 +35,7 @@ header{
   color:#7e7d7b;
   padding-top: 30px;
   min-height: 70px;
-  border-bottom: #e8491d 3px solid;
+  border-bottom: none;
 }
 
 header a{
@@ -66,6 +73,39 @@ header a:hover{
   color:#cccccc;
   font-weight: bold;
 }
+/*Second Menu */
+#secondMenu ul{
+  margin: 10x;
+  padding: 0px;
+  list-style:none;
+}
+#secondMenu ul li{
+  float: left;
+  width:200px;
+  height:40px;
+  line-height:40px;
+  text-align: center;
+  font-size:20px;
+  margin: 2px;
+  margin-right:45px;
+  margin-left: 40px;
+}
+#secondMenu ul li a{
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+#secondMenu ul li a:hover{
+  background-color: orange;
+}
+#secondMenu ul li ul li{
+  display: none;
+  background-color: orange;
+}
+#secondMenu ul li:hover ul li{
+  display: block;
+}
+
 /* Showcase */
 #showcase{
   min-height: 400px;
