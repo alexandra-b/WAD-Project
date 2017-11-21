@@ -1,12 +1,70 @@
-<html lang="en">
- 
-   <%- include header %>
-   <!-- Main component for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <h1>Welcome</h1>
-        <p>Hello to your Dashboard, <%- user.first_name %>  </p>
-        <p>
-          <a class="btn btn-lg btn-primary" href="#" role="button">Profile view »</a>
-        </p>
-      </div>
-    <%- include footer %>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Easy fun cooking">
+  <meta name="keywords" content="cooking, easy cooking, recipes">
+  <meta name="author" content="Alexandra Bocereg">
+  <link rel="stylesheet" href="/css/style.css">
+  <title> My Profile </title>
+</head>
+<body>
+  <header>
+      <div class="container">
+        <div id="branding">
+          <h1><span class="highlight">Fun</span> Cooking</h1>
+        </div>
+        <nav>
+          <ul>
+            <li class="current"><a href="Index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/signup">Sign Up</a></li>
+            <li><a href="/login"><img src="img/user.png" height=30px width=30px></a></li>
+        </nav>
+      </div>
+    </header>
+      <div class="secondContainer">
+        <div id="secondMenu">
+          <ul>
+            <li><a>Healthy</a></li>
+            <li><a>Traditional Recipes</a></li>
+            <li><a>International Recipes</a>
+                <ul>
+                  <li><a>Cooking idea</a></li>
+                  <li><a>How it started</a></li>
+                  <li><a>Mission </a></li>
+                </ul>
+            </li>
+
+            <li><a>Diet Choices</a>
+                <ul>
+                  <li><a>Add recipe</a></li>
+                  <li><a>Add video</a></li>
+                  <li><a>Add restaurant </a></li>
+                </ul>
+            </li>
+            <li><a>Kids Menu</a>
+                <ul>
+                  <li><a>Where to find us</a></li>
+                  <li><a>Phone Number</a></li>
+                </ul>
+          </ul>
+        </div>
+      </div>
+
+        <div class="jumbotron">
+          <h1>Welcome</h1>
+          <p>Hello to your Dashboard, <%- user.first_name %>  </p>
+          <p>
+            <a class="btn btn-lg btn-primary" href="#" role="button">Profile view »</a>
+          </p>
+      </div>
+  <footer>
+    <p> Fun Cooking Recipes, Copyright &copy; 2017 </p>
+  </footer>
+
+</body>
+
+</html>

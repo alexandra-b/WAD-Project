@@ -17,12 +17,12 @@ exports.login = function(req, res){
          }
          else{
             message = 'Wrong Credentials.';
-            res.render('index.ejs',{message: message});
+            res.render('login.ejs',{message: message});
          }
                 
       });
    } else {
-      res.render('index.ejs',{message: message});
+      res.render('login.ejs',{message: message});
    }        
 };
 
@@ -55,7 +55,7 @@ exports.dashboard = function(req, res, next){
 
  if(userId == null || user == null){
    req.session.reset();
-   res.redirect("/home/login");
+   res.redirect("/login");
    return;
  }
 
@@ -63,9 +63,9 @@ exports.dashboard = function(req, res, next){
 
     db.query(sql, function(err, results){
    
-    console.log(results);
-    console.log("DID GET THE RESULTS AND PRINTED");
-   
+   // console.log(results);
+    //console.log("DID GET THE RESULTS AND PRINTED");
+
     res.render('profile.ejs', {user : user});
    
  });

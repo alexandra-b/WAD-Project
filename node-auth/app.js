@@ -41,12 +41,16 @@ app.use(session({
 }));
 //*******
 app.get('/', routes.index);//call for main index page
-app.get('/login', routes.index);//call for login page
 app.get('/signup', user.signup);//call for signup page
+app.get('/login', (req,res) => {
+  res.render('login',{message:'Login'});
+}); //MY CALL LOGIN PAGE
 app.post('/login', user.login);//call for login post
 app.post('/signup', user.signup);//call for signup post
 app.get('/home/logout',user.logout); //call for log out
 
 app.get('/home/dashboard', user.dashboard);//call for dashboard page after login
 //Middleware
-app.listen(8080)
+app.listen(8080, () => {
+  console.log("Running on: 8080");
+});

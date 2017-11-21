@@ -1,0 +1,45 @@
+body{
+  margin:0 auto;
+  background-image: url("../img/loginbg6.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.container{
+  width:500px;
+  height:500px;
+  text-align:center;
+  background-color: rgba(230, 230, 230, 0.7);
+  border-radius:4px;
+  margin: 0 auto;
+  margin-top:160px;
+}
+.container img{
+  width:120px;
+  height:120px;
+  margin-top: -50px;
+  margin-bottom:30px;
+}
+input[type="text"],input[type="password"],input[type="email"]{
+  height:45px;
+  width:300px;
+  font-size:18px;
+  margin-bottom:20px;
+  background-color: #fff;
+  padding-left:40px;
+}
+.btn-login{
+  padding: 15px 30px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  background-color: #2ecc71;
+  border-bottom: 4px solid #27AE60;
+  margin-bottom:20px;
+}
+a{
+  color: #000;
+}
+p{
+
+}

@@ -1,76 +1,100 @@
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Sample Site</title>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
-  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Easy fun cooking">
+  <meta name="keywords" content="cooking, easy cooking, recipes">
+  <meta name="author" content="Alexandra Bocereg">
+  <link rel="stylesheet" href="/css/style.css">
+  <title> Fun Cooking | Welcome <%= message %> </title>
 </head>
-<body id="clrblk">
-        <div class="container">  
-        <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                  
-            <div class="panel panel-info" >
-                    <div class="panel-heading">
-                        <div class="panel-title">Sign In</div>
-                        <!--<div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div>-->
-                    </div>    
 
-                    <div style="padding-top:30px" class="panel-body" >
-                                                                        <% if (message.length > 0) { %>
-                                                                                    <div class="alert alert-danger col-sm-12"><%= message %></div>
-                                                                        <% } %>
-                          
-                        <form id="loginform" class="form-horizontal" role="form" method="post" action="/login">
-                                  
-                            <div style="margin-bottom: 25px" class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                        <input id="login-username" type="text" class="form-control" name="user_name" value="" placeholder="username">                                      
-                                    </div>
-                              
-                            <div style="margin-bottom: 25px" class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                        <input id="login-password" type="password" class="form-control" name="password" placeholder="password">
-                                    </div>
-                                  
+<body>
+  <header>
+    <div class="container">
+      <div id="branding">
+        <h1><span class="highlight">Fun</span> Cooking</h1>
+      </div>
+      <nav>
+        <ul>
+          <li class="current"><a href="Index.html">Home</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="/login">Login</a></li>
+          <li><a href="/signup">Sign Up</a></li>
+          <li><a href="/login"><img src="img/user.png" height=30px width=30px></a></li>
+      </nav>
+    </div>
+  </header>
+    <div class="secondContainer">
+      <div id="secondMenu">
+        <ul>
+          <li><a>Healthy</a></li>
+          <li><a>Traditional Recipes</a></li>
+          <li><a>International Recipes</a>
+              <ul>
+                <li><a>Cooking idea</a></li>
+                <li><a>How it started</a></li>
+                <li><a>Mission </a></li>
+              </ul>
+          </li>
 
-                              
-                            <div class="input-group">
-                                      <!--<div class="checkbox">
-                                        <label>
-                                          <input id="login-remember" type="checkbox" name="remember" value="1"> Remember me
-                                        </label>
-                                      </div>-->
-                                    </div>
+          <li><a>Diet Choices</a>
+              <ul>
+                <li><a>Add recipe</a></li>
+                <li><a>Add video</a></li>
+                <li><a>Add restaurant </a></li>
+              </ul>
+          </li>
+          <li><a>Kids Menu</a>
+              <ul>
+                <li><a>Where to find us</a></li>
+                <li><a>Phone Number</a></li>
+              </ul>
+        </ul>
+      </div>
+    </div>
 
+  <section id="showcase">
+    <div class="container">
+      <h1> Easy Recipes </h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+    </div>
+  </section>
 
-                                <div style="margin-top:10px" class="form-group">
-                                    <!-- Button -->
+  <section id="newsletter">
+    <div class="container">
+      <h1>Subscribe To Our Newsletter</h1>
+      <form>
+        <input type="email" placeholder="Enter Email...">
+        <button type="submit" class="button_1">Subscribe</button>
+      </form>
+    </div>
+  </section>
 
-                                    <div class="col-sm-12 controls">
-                                      <button id="btn-login" type="submit" class="btn btn-success">Login  </button>
-                                    
+  <section id="boxes">
+    <div class="container">
+      <div class="box">
+        <img src="img/drink.png">
+        <h3>Drinks</h3>
+        <p>Sed ut perspiciatis unde omnis iste natus err
+          or sit voluptatem accusantium </p>
+      </div>
+      <div class="box">
+        <img src="img/food.png">
+        <h3>Main Dish & Appetizers</h3>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium </p>
+      </div>
+      <div class="box">
+        <img src="img/dessert.png">
+        <h3>Desserts</h3>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium </p>
+      </div>
+    </div>
+  </section>
 
-                                    </div>
-                                </div>
-
-
-                                <div class="form-group">
-                                    <div class="col-md-12 control">
-                                        <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%" >
-                                            Don't have an account!
-                                        <a href="/signup">
-                                            Sign Up Here
-                                        </a>
-                                        </div>
-                                    </div>
-                                </div>  
-                            </form>    
-
-
-
-                        </div>                    
-                    </div>
-        </div>
-      
-    </div>
+  <footer>
+    <p> Fun Cooking Recipes, Copyright &copy; 2017 </p>
+  </footer>
 </body>
+
 </html>
