@@ -1,0 +1,57 @@
+<body>
+  <header>
+    <div class="container">
+      <div id="branding">
+        <h1><img src="/img/sitelogo.png" height=45px width=45px><span class="highlight">Fun</span> Cooking</h1>
+      </div>
+      <nav>
+        <ul>
+          <li class="current"><a href="/">Home</a></li>
+          <li><a href="About.html">About</a></li>
+          <% if (typeof user == 'undefined') { %>
+          <li><a href="/login">Login</a></li>
+          <li><a href="/signup">Sign Up</a></li>
+          <%} else {%>
+          <li><a href="/login"><img src="/img/loggeduser.png" height=30px width=30px></a></li>
+          <li class="current dropdown"><a href="#"> <%- user.first_name %> </a>
+            <div class="dropdown-content">
+            <ul>
+              <li><a href="/catalog/recipe/create">Add recipe</a></li>
+              <li><a href="#">My recipes</a></li>
+              <li><a href="#">My profile </a></li>
+            </ul>
+          </div>
+          </li>
+          <li><a href="/home/logout"> Log Out </a> </li>
+          <% } %>
+      </nav>
+    </div>
+  </header>
+    <div class="secondContainer">
+      <div id="secondMenu">
+        <ul>
+          <li><a>Healthy</a></li>
+          <li><a>Traditional Recipes</a></li>
+          <li><a>International Recipes</a>
+              <ul>
+                <li><a>Cooking idea</a></li>
+                <li><a>How it started</a></li>
+                <li><a>Mission </a></li>
+              </ul>
+          </li>
+
+          <li><a>Diet Choices</a>
+              <ul>
+                <li><a>Add recipe</a></li>
+                <li><a>Add video</a></li>
+                <li><a>Add restaurant </a></li>
+              </ul>
+          </li>
+          <li><a>Kids Menu</a>
+              <ul>
+                <li><a>Where to find us</a></li>
+                <li><a>Phone Number</a></li>
+              </ul>
+        </ul>
+      </div>
+    </div>

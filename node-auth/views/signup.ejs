@@ -1,30 +1,29 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title></title>
+<%- include header%>
+  <title> Sign Up </title>
   <link rel="stylesheet" type="text/css" href="css/registerstyle.css"></link>
   <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 </head>
+<%- include menuSubmenu%>
 <body>
-  <div class="container">
+  <div class="registercontainer">
     <img src="img/user.png">
-    <p><%= message %> </p>
+    <p>Sign Up</p>
     <form role="form" method="post" action="/signup" onSubmit="return checkblank(this);">
       <div class="form-input">
-        <input type="text" name="name" placeholder="First Name">
+        <input type="text" name="first_name" placeholder="First Name">
       </div>
       <div class="form-input">
-        <input type="text" name="last-name" placeholder="Last Name">
+        <input type="text" name="last_name" placeholder="Last Name">
       </div>
       <div class="form-input">
-        <input type="text" name="username" placeholder="Enter Username">
+        <input type="text" name="user_name" placeholder="Enter Username">
       </div>
       <div class="form-input">
         <input type="password" name="password" placeholder="Enter Password">
       </div>
       <input type="submit" name="submit" value="Register" class="btn-login"> <br>
       <div class="signme-up">
-      <p><a href="#"> Already have an account? </a></p>
+      <p><a href="/login"> Already have an account? </a></p>
     </div>
     </form>
   </div>

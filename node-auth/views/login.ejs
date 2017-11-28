@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title></title>
-  <link rel="stylesheet" type="text/css" href="css/loginstyle.css"></link>
-  <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
-</head>
+<%- include header %>
+  <title> Login </title>
+  <link rel="stylesheet" href="/css/loginstyle.css">
+</header>
+<%- include menuSubmenu %>
 <body>
-  <div class="container">
+  <div class="logincontainer">
     <img src="img/user.png">
     <p> <%= message %> </p>
     <form role="form" method="post" action="/login">
