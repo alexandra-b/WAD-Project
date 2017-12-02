@@ -1,31 +1,31 @@
 body{
   margin:0 auto;
-  background-image: url("../img/loginbg6.jpg");
-  background-size: 100%;
+  background-image: url("../img/gradient3login.jpg");
+  -moz-background-size: cover; /* For Mozilla */
   background-repeat: no-repeat;
 }
-.container{
+.registercontainer{
   width:500px;
-  height:500px;
+  height:480px;
   text-align:center;
   background-color: rgba(230, 230, 230, 0.7);
   border-radius:4px;
   margin: 0 auto;
-  margin-top:160px;
+  margin-top:80px;
 }
-.container img{
-  width:120px;
-  height:120px;
+.registercontainer img{
+  width:100px;
+  height:100px;
   margin-top: -50px;
-  margin-bottom:30px;
+  margin-bottom:10px;
 }
 input[type="text"],input[type="password"],input[type="email"]{
   height:45px;
   width:300px;
   font-size:18px;
-  margin-bottom:20px;
+  margin-bottom:15px;
   background-color: #fff;
-  padding-left:40px;
+  padding-left:30px;
 }
 .btn-login{
   padding: 15px 30px;

@@ -10,7 +10,9 @@
     "express-session": "^1.15.1",
     "client-sessions": "*",
     "mysql": "^2.13.0",
-    "req-flash": "0.0.3"
+    "req-flash": "0.0.3",
+    "moment": "2.19.3",
+    "async": "2.6.0"
   },
   "devDependencies": {},
   "scripts": {

@@ -9,8 +9,9 @@ html{
     padding: 55px;
     box-sizing: border-box;
     background-image: url("../img/gradient3login.jpg");
-    -moz-background-size: cover; /* For Mozilla */
+  /*  -moz-background-size: contain; /* For Mozilla */
     background-repeat: no-repeat;
+    background-size: 640px 1200px;
   /*  background-color:  #ffffff; */
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
     font: bold 14px sans-serif;
@@ -44,7 +45,7 @@ html{
     display: inline-block;
     box-sizing: border-box;
     color: #5F5F5F;
-    width: 180px;
+    width: 240px;
     text-align: right;
     vertical-align: top;
     padding: 12px 25px;
@@ -94,8 +95,8 @@ html{
 .form-basic #ingred textarea{
     color:  #5f5f5f;
     box-sizing: border-box;
-    width: 240px;
-    height: 50px;
+    width: 150px;
+    height: 200px;
     box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
     font: normal 13px sans-serif;
     padding: 12px;
@@ -123,6 +124,19 @@ html{
 }
 
 .form-basic button{
+    display: block;
+    border-radius: 2px;
+    background-color:  #6caee0;
+    color: #ffffff;
+    font-weight: bold;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    padding: 14px 22px;
+    border: 0;
+    margin: 40px 183px 0;
+}
+
+/* MIIINE */
+.form-basic submit{
     display: block;
     border-radius: 2px;
     background-color:  #6caee0;

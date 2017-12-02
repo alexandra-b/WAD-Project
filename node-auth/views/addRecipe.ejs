@@ -4,7 +4,7 @@
   </head>
   <body>
 <%- include menuSubmenu %>
-    <form class="form-basic" method="post" action="#">
+    <form class="form-basic" role="form" method="post" action="">
 
         <div class="form-title-row">
             <h1>Add recipe</h1>
@@ -12,15 +12,15 @@
 
         <div class="form-row">
             <label>
-                <span>Title</span>
+                <span>Recipe title</span>
                 <input type="text" name="title">
             </label>
         </div>
 
         <div class="form-row">
             <label>
-                <span>Link To Image</span>
-                <input type="text" name="title">
+                <span>Link to an image</span>
+                <input type="text" name="imglink">
             </label>
         </div>
 
@@ -39,56 +39,60 @@
         <div class="form-row" id="ingred">
             <label>
                 <span>Ingredients</span>
-                <textarea name="textarea"></textarea>
+                <textarea name="ingredtextarea"></textarea>
             </label>
         </div>
 
         <div class="form-row">
             <label>
                 <span>How to:</span>
-                <textarea name="textarea"></textarea>
+                <textarea name="howtotextarea"></textarea>
             </label>
         </div>
-
+<!--
         <div class="form-row">
             <label>
                 <span>Checkbox</span>
                 <input type="checkbox" name="checkbox" checked>
             </label>
         </div>
-
+-->
         <div class="form-row">
             <label><span>Difficulty level of recipe:</span></label>
             <div class="form-radio-buttons">
 
                 <div>
                     <label>
-                        <input type="radio" name="radio">
+                        <input type="radio" name="radio" value="0">
                         <span>Easy</span>
                     </label>
                 </div>
 
                 <div>
                     <label>
-                        <input type="radio" name="radio">
+                        <input type="radio" name="radio" value="1">
                         <span>Intermidiate</span>
                     </label>
                 </div>
 
                 <div>
                     <label>
-                        <input type="radio" name="radio">
+                        <input type="radio" name="radio" value="2">
                         <span>Hard</span>
                     </label>
                 </div>
-
+                <div>
+                  <label>
+                    <input type="submit" name="submit" value="Add recipe">
+                  </label>
+                </div>
             </div>
         </div>
-
+<!--
         <div class="form-row">
-            <button type="submit">Submit Form</button>
+            <button type="submit">Add Recipe</button>
         </div>
-
+-->
     </form>
 
 

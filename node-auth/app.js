@@ -5,11 +5,13 @@ var http = require('http');
 var path = require('path');
 //mine
 var session = require('client-sessions');
+//var recipe_controller = require('./controllers/recipeController');
+//var catalog = require('./routes/catalog');
 //mine
 //var methodOverride = require('method-override');
 var app = express();
 var mysql   = require('mysql');
-var bodyParser=require("body-parser");
+var bodyParser = require("body-parser");
 var connection = mysql.createConnection({
               host     : 'localhost',
               user     : 'root',
@@ -36,11 +38,13 @@ app.use(session({
   duration: 30 * 60 * 1000,
   activeDuration: 5 * 60 * 1000,
   httpOnly: true,
-  secure: true,
+  secure: true,
   ephemeral: true
 }));
-//*******
+//*******MAIN PAGES ************/
 app.get('/', routes.index);//call for main index page
+app.get('/home', routes.index);//call for main index page
+
 app.get('/signup', user.signup);//call for signup page
 app.get('/login', (req,res) => {
   res.render('login',{message:'Login'});
@@ -50,6 +54,19 @@ app.post('/signup', user.signup);//call for signup post
 app.get('/home/logout',user.logout); //call for log out
 
 app.get('/home/dashboard', user.dashboard);//call for dashboard page after login
+/* ********************************/
+//app.use('/catalog',catalog);
+
+
+/*******************RECIPE PAGES **************/
+
+app.get('/recipe/create',user.recipe_create_get);
+app.post('/recipe/create',user.recipe_create_post);
+app.get('/recipe/:id',user.recipe_detail);
+app.get('/myrecipes',user.myrecipes_list);
+
+
+
 //Middleware
 app.listen(8080, () => {
   console.log("Running on: 8080");

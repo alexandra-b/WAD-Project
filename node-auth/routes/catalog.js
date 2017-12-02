@@ -1,7 +1,8 @@
 var express = require('express');
 var router = express.Router();
-
+var moment = require('moment');
 var recipe_controller = require ('../controllers/recipeController');
+
 //var user_controller = require ('../controllers/userController');
 //var comment_controller = require ('../controllers/commentController');
 
@@ -30,7 +31,10 @@ router.post('/recipe/:id/update',recipe_controller.recipe_update_post);
 router.get('/recipe/:id',recipe_controller.recipe_detail);
 
 /*GET request to list all RECIPEs */
-router.get('/recipes',recipe_controller.recipe_list);
+router.get('/allrecipes',recipe_controller.recipes_list);
+
+/*GET request to list all my RECIPEs */
+router.get('/myrecipes',recipe_controller.myrecipes_list);
 
 module.exports = router;
 /* ************************************************ */
